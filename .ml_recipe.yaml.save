@@ -1,0 +1,13 @@
+command:
+- env;  jupyter kernelspec list; jupyter nbconvert  --to html --output /output/$ML_JOB_ID.html
+  --execute GAN_Interface_2-Copy1.ipynb --ExecutePreprocessor.allow_errors=True --ExecutePreprocessor.timeout=-1  --ExecutePreprocessor.kernel_name=python2
+gpu: true
+image: tensorflow/tensorflow:1.1.0-devel-gpu
+org: strudel
+persistent_paths:
+- host_path: /home/elad/Desktop/SPACE-GAN/Data
+  mount_path: /Data
+- host_path: /home/elad/Desktop/SPACE-GAN/results
+  mount_path: /output
+project: '5491823292186624'
+queue: local

@@ -1,0 +1,10 @@
+numpy
+keras==2.0.8
+pandas
+sklearn
+tqdm
+missinglink
+astropy
+jupyter
+keras_tqdm
+h5py
